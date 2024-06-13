@@ -1,0 +1,74 @@
+body {
+	background: #FAF8EF; /* FAF8EF */
+}
+canvas {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+#lose {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	background: #eee4daba;
+	
+	font-family: "Ubuntu", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 55px;
+	color: #776e65;
+	font-weight: "medium";
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	user-select: none;
+	-webkit-user-select: none;
+
+	transition: opacity 200ms 0ms cubic-bezier(0.215, 0.610, 0.355, 1);
+	opacity: 0;
+	pointer-events: none;
+}
+#lose.active {
+	transition-duration: 500ms;
+	transition-delay: 500ms;
+	opacity: 1;
+	pointer-events: all;
+}
+#lose>div {
+	width: inherit;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#lose p {
+	display: block;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 30px;
+}
+#lose button {
+	background: #8f7a66;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	
+	font-family: "Ubuntu", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 20px;
+
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	padding-left:  20px;
+	padding-right: 20px;
+
+	cursor: pointer;
+	transition: transform 80ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}

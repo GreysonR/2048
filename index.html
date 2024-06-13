@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="margin: 0; overflow: hidden;">
+	<canvas id="canv"></canvas>
+	<div id="lose">
+		<div>
+			<script>
+				function buttonClick(button) {
+					button.style.transform = "scale(0.95)";
+					window.addEventListener("mouseup", function mouseup() {
+						button.style.transform = "scale(1)";
+						window.removeEventListener("mouseup", mouseup);
+					});
+				}
+			</script>
+
+			<p>Game over!</p>
+			<button onmousedown="buttonClick(this)" onclick="reset()">Try again</button>
+		</div>
+	</div>
+</body>
+<script src="vec.js"></script>
+<script src="animations.js"></script>
+<script src="engine.js"></script>
+<script src="runner.js"></script>
+
+<script src="ai/ai.js"></script>
+</html>
