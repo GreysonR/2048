@@ -67,7 +67,7 @@ const engine = {
 				let by = block.position.y;
 				let px = bx*(blockSize + margin) + margin;
 				let py = by*(blockSize + margin) + margin;
-				ctx.fillStyle = engine.blockColors[Math.min(engine.blockColors.length - 1, Math.log(block.value) / Math.log(2) - 1)];
+				ctx.fillStyle = engine.blockColors[Math.min(engine.blockColors.length - 1, Math.round(Math.log(block.value) / Math.log(2)) - 1)];
 
 				let scale = block.scale;
 				if (scale !== 1) {
